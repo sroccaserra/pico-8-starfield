@@ -2,4 +2,4 @@ PICO_8 ?= /Users/sebastien.roccaserra/Applications/Games/PICO-8/PICO-8.app/Conte
 
 .PHONY: run
 run:
-	$(PICO_8) -run carts/starfield.p8
+	$(PICO_8) -root_path carts -run carts/starfield.p8

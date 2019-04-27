@@ -1,3 +1,4 @@
+-->8
 -- screen
 
 screen_half_width = 64

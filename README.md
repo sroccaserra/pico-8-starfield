@@ -4,6 +4,10 @@ Note: requires PICO-8 v0.1.12 for the new `#include` instruction.
 
 ![Demo GIF](images/starfield_0.gif?raw=true)
 
+You can try it live here:
+
+- https://www.lexaloffle.com/bbs/?tid=34064
+
 ## Starting the demo
 
 From the root of this repository, set the `PICO_8` environment variable to point to your `pico8` executable, and `make run`:
