@@ -29,3 +29,7 @@ Press `down` or `x` to decelerate.
 I used [Lou's Pseudo 3d Page](http://www.extentofthejam.com/pseudo/) to quickly find this formula:
 
     y_screen = (y_world/z_world) + (y_resolution/2)
+
+I used this thread to build the color ramps:
+
+- https://www.lexaloffle.com/bbs/?pid=11469

@@ -7,22 +7,13 @@ screen_half_height = 64
 screen_z = 10
 far_z = 100
 
-greys = {7, 6, 13, 5, 1}
-grey_distance_inc = (far_z - screen_z) / #greys
-grey_distances = {
-    screen_z + grey_distance_inc,
-    screen_z + 2 * grey_distance_inc,
-    screen_z + 3 * grey_distance_inc,
-    screen_z + 4 * grey_distance_inc
-}
-
-function z_color(z)
-    for i,distance in pairs(grey_distances) do
-        if z < distance then
-            return greys[i]
-        end
+function split_z_distances(n)
+    local z_distances = {}
+    local distance_inc = (far_z - screen_z) / n
+    for i=1,n-1 do
+        add(z_distances, screen_z + i * distance_inc)
     end
-    return greys[#greys]
+    return z_distances
 end
 
 function screen_project(point_3d)

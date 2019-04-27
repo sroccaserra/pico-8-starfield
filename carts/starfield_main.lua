@@ -15,7 +15,7 @@ function _draw()
     cls()
     for star in all(stars) do
         local trail = star:trail()
-        local col = z_color(star.z)
+        local col = star:z_color()
         local star_proj = screen_project(star)
         local trail_proj = screen_project(trail)
         line(star_proj.x, star_proj.y, trail_proj.x, trail_proj.y, col)
@@ -29,11 +29,6 @@ function _update60()
         z_speed = z_speed + 1/fps
     end
     for star in all(stars) do
-        star.z = star.z + z_speed
-        if star.z < screen_z then
-            star.z = far_z
-        elseif star.z > far_z then
-            star.z = screen_z
-        end
+        star:update()
     end
 end
