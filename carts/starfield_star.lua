@@ -1,6 +1,5 @@
 -- star
 
-star_trail = 2
 amplitude = 512
 
 star = {}
@@ -20,7 +19,7 @@ function star:trail()
     return {
         x = self.x,
         y = self.y,
-        z = self.z + star_trail
+        z = self.z - z_increment
     }
 end
 
