@@ -1,6 +1,9 @@
 pico-8 cartridge // http://www.pico-8.com
 version 18
 __lua__
+-- ~starfield demo~
+-- by @sroccaserra
+
 #include starfield_main.lua
 #include starfield_screen.lua
 #include starfield_star.lua
