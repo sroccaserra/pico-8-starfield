@@ -15,9 +15,9 @@ function _draw()
     cls()
     for star in all(stars) do
         local trail = star:trail()
-        local col = star_color(star)
-        local star_proj = project(star)
-        local trail_proj = project(trail)
+        local col = z_color(star.z)
+        local star_proj = screen_project(star)
+        local trail_proj = screen_project(trail)
         line(star_proj.x, star_proj.y, trail_proj.x, trail_proj.y, col)
     end
 end
