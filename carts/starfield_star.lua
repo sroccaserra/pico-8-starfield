@@ -3,6 +3,7 @@
 amplitude = 512
 
 star = {}
+star.__index = star
 
 function star:new()
     local o = {
@@ -10,16 +11,14 @@ function star:new()
         y = rnd(amplitude*2)-amplitude,
         z = rnd(far_z-screen_z)+screen_z
     }
-    setmetatable(o, self)
-    self.__index = self
-    return o
+    return setmetatable(o, self)
 end
 
 function star:trail()
     return {
         x = self.x,
         y = self.y,
-        z = self.z - z_increment
+        z = self.z - 2*z_speed
     }
 end
 

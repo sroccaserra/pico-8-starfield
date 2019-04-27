@@ -6,22 +6,22 @@ screen_half_height = 64
 screen_z = 10
 far_z = 100
 
-third_inc = (far_z - screen_z)/3
-light_z = screen_z + third_inc
-dark_z = light_z + third_inc
-
-light_color = 7
-middle_color = 6
-dark_color = 5
+greys = {7, 6, 13, 5, 1}
+grey_distance_inc = (far_z - screen_z) / #greys
+grey_distances = {
+    screen_z + grey_distance_inc,
+    screen_z + 2 * grey_distance_inc,
+    screen_z + 3 * grey_distance_inc,
+    screen_z + 4 * grey_distance_inc
+}
 
 function z_color(z)
-    if z <= light_z then
-        return light_color
-    elseif dark_z < z then
-        return dark_color
+    for i,distance in pairs(grey_distances) do
+        if z < distance then
+            return greys[i]
+        end
     end
-
-    return middle_color
+    return greys[#greys]
 end
 
 function screen_project(point_3d)

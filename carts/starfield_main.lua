@@ -1,7 +1,7 @@
 -- main
 
 fps = 60
-z_increment = -60/fps
+z_speed = -60/fps
 nb_stars = 200
 
 function _init()
@@ -24,12 +24,12 @@ end
 
 function _update60()
     if btn(4) or btn(2) then
-        z_increment = z_increment - 1/fps
+        z_speed = z_speed - 1/fps
     elseif btn(5) or btn(3) then
-        z_increment = z_increment + 1/fps
+        z_speed = z_speed + 1/fps
     end
     for star in all(stars) do
-        star.z = star.z + z_increment
+        star.z = star.z + z_speed
         if star.z < screen_z then
             star.z = far_z
         elseif star.z > far_z then

@@ -2,7 +2,7 @@ A classic starfield effect in [PICO-8](https://www.lexaloffle.com/pico-8.php).
 
 Note: requires PICO-8 v0.1.12 for the new `#include` instruction.
 
-![demo](images/starfield_0.gif?raw=true)
+![Demo GIF](images/starfield_0.gif?raw=true)
 
 ## Starting the demo
 
