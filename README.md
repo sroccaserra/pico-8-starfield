@@ -6,17 +6,13 @@ Note: requires PICO-8 v0.1.12c for the new `#include` instruction.
 
 ## Starting the demo
 
-From the root of this repository, set the `PICO_8` environment variable to point to your `pico8` executable, and run `make`:
+From the root of this repository, set the `PICO_8` environment variable to point to your `pico8` executable, and `make run`:
 
     $ PICO_8=/path/to/pico8 make run
 
-This starts PICO-8 with the `carts` dir set to this repository's `carts` dir.
+Or you can run PICO-8 with these options:
 
-Then within PICO-8, load and run the cart:
-
-    > load starfield
-    loaded starfield.p8 (73 chars)
-    > run
+    $ /path/to/pico8 -run carts/starfield.p8
 
 ## Changing the speed
 
