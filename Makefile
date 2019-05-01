@@ -1,4 +1,4 @@
-PICO_8 ?= /Users/sebastien.roccaserra/Applications/Games/PICO-8/PICO-8.app/Contents/MacOS/pico8
+PICO_8 ?= $(HOME)/Applications/Games/PICO-8/PICO-8.app/Contents/MacOS/pico8
 
 .PHONY: run
 run:
