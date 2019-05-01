@@ -8,7 +8,7 @@ star.__index = star
 
 -- bright to dark
 grey_ramp = {7, 6, 13, 5, 1}
-red_ramp = {7, 9, 13, 4, 2}
+red_ramp = {7, 15, 9, 4, 2}
 
 function star:new()
   local o = {
